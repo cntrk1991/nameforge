@@ -1,0 +1,52 @@
+import random
+
+def stylize(text):
+    table = str.maketrans({
+        "a": "4", "e": "3", "i": "1", "o": "0"
+    })
+    return text.translate(table)
+
+
+def forge(name):
+    name = name.lower().replace(" ", "")
+
+    prefixes = ["the", "real", "official", ""]
+    suffixes = ["", "dev", "app", "hq", "io"]
+    separators = ["", "_", "."]
+
+    variations = [
+        name,
+        name.capitalize(),
+        stylize(name),
+        name[::-1]
+    ]
+
+    results = set()
+
+    for _ in range(8):
+        username = (
+            random.choice(prefixes)
+            + random.choice(separators)
+            + random.choice(variations)
+            + random.choice(separators)
+            + random.choice(suffixes)
+        )
+
+        results.add(username.strip("._"))
+
+    return results
+
+
+def main():
+    print("NameForge • Professional Username Generator")
+
+    name = input("Enter a name: ")
+    usernames = forge(name)
+
+    print("\nGenerated Usernames:\n")
+    for u in sorted(usernames):
+        print(u)
+
+
+if __name__ == "__main__":
+    main()
