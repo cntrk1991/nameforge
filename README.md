@@ -20,9 +20,7 @@ A CLI tool that generates clean and professional usernames from user input witho
 ```bash
 python nameforge.py
 
----
-
-official.canturk  
-canturk_dev  
-the_canturk  
-canturk.io  
+official.canturk
+canturk_dev
+the_canturk
+canturk.io
