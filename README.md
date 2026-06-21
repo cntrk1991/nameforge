@@ -9,13 +9,27 @@ A CLI tool that generates clean and professional usernames from user input witho
 ---
 
 ## ⚡ Features
-- Clean and minimal username generation
-- Professional-style outputs
-- No API required
-- Lightweight and fast
+
+* Clean and minimal username generation
+* Professional-style outputs
+* No API required
+* Lightweight and fast
 
 ---
 
 ## ▶️ Run
+
 ```bash
 python nameforge.py
+```
+
+---
+
+## 📌 Example Output
+
+```
+official.canturk
+canturk_dev
+the_canturk
+canturk.io
+```
